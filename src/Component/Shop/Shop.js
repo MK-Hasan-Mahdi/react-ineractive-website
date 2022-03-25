@@ -4,13 +4,20 @@ import Product from '../Product/Product';
 import './Shop.css';
 
 const Shop = () => {
-    const [products, setProducts] = useState([])
+    const [products, setProducts] = useState([]);
+    const [cart, setCart] = useState([]);
 
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
+
+    const handleAddToCart = (product) => {
+        // console.log('I am clicked button');
+        const selectedProduct = [...cart, product];
+        setCart(selectedProduct)
+    }
 
     return (
         <div className='shop-container container'>
@@ -19,11 +26,14 @@ const Shop = () => {
                     products.map(product => <Product
                         product={product}
                         key={product.id}
+                        handleAddToCart={handleAddToCart}
                     ></Product>)
                 }
             </div>
             <div className="cart-container">
-                <Cart></Cart>
+                <Cart
+                    cart={cart}
+                ></Cart>
             </div>
         </div>
     );
