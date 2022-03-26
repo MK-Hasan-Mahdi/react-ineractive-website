@@ -1,6 +1,6 @@
 # Double-You Tech
 
-Live Site Link: [Double-You Tech](https://double-you-tech.netlify.app/).
+Live Site : [Double-You Tech](https://double-you-tech.netlify.app/).
 
 
 
