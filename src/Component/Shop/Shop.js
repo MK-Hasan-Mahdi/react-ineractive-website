@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
-import RandomItem from './RandomItem/RandomItem';
 import './Shop.css';
 import { ImCross } from 'react-icons/im'
 import Modal from 'react-modal';
@@ -42,7 +41,7 @@ const Shop = () => {
 
     const handleAddToCart = (product) => {
         if (cart.length > 3) {
-            alert('pls give below 3');
+            alert('Please choose maximum 4 item');
             return
         } else {
             const selectedProduct = [...cart, product];
@@ -78,11 +77,6 @@ const Shop = () => {
             <div className="cart-container shadow">
                 <h3>Products Cart</h3>
                 {
-                    <RandomItem
-                        randomItem={randomItem}
-                    ></RandomItem>
-                }
-                {
                     cart.map(item => <Cart
                         key={item.id}
                         item={item}
@@ -97,7 +91,7 @@ const Shop = () => {
                     <img className='modal-image' src={randomItem.picture} alt="" />
                     <h1>{randomItem.name}</h1>
                 </Modal>
-                <button onClick={() => randomFunc(cart)} className="btn btn-info w-100">click</button>
+                <button onClick={() => randomFunc(cart)} className="btn btn-success w-100">Choose One</button>
                 <br />
                 <button onClick={resetFunc} className="btn btn-warning w-100">Reset</button>
             </div>

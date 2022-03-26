@@ -20,7 +20,7 @@ const Product = ({ handleAddToCart, product }) => {
                 </div>
                 <button onClick={() => handleAddToCart(product)} className='btn-shopping btn-primary'>
                     <p className='btn-text'>Add To Cart</p>
-                    <BsCartPlus></BsCartPlus>
+                    <p><BsCartPlus></BsCartPlus></p>
                 </button>
             </div>
         </div>
