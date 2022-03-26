@@ -10,10 +10,12 @@
     background-color: lightskyblue;
 }
 @media screen and (max-width: 400px){
-    .products-container{
-        grid-template-columns: 1fr;
-    }
     .shop-container{
+        grid-template-columns: 1fr;
+        
+    }
+
+    .products-container{
         grid-template-columns: 1fr;
     }
 }
