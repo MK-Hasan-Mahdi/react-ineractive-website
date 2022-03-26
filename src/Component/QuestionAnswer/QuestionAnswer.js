@@ -23,6 +23,10 @@ const QuestionAnswer = () => {
                     <li>State can be modified.</li>
                     <li>State used in same component that's why it depends on need to reuse of component but reusing not depends on state.</li>
                 </p>
+                <h6>(3) How useState works?</h6>
+                <p>Ans: <br />
+                    useState is a hook that required state variables in functional components. We can pass one initial state, it returns a variabele current state value, it also remembered can be empty initial value and another state will update current value. After set useState it can be use anywhere in our component. useState hook can be use for object, array, boolean, string, number and these kind of works. Many useState hook can be use in a component.
+                </p>
             </div>
         </div>
     );
