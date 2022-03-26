@@ -41,7 +41,7 @@ const Shop = () => {
                     ></Product>)
                 }
             </div>
-            <div className="cart-container">
+            <div className="cart-container shadow">
                 <h3>Products Cart</h3>
                 {
                     <RandomItem
