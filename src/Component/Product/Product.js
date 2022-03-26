@@ -11,12 +11,14 @@ const Product = ({ handleAddToCart, product }) => {
 
     return (
         <div>
-            <div className="product p-3 m-2 shadow border">
+            <div className="product m-2 py-3 shadow border">
                 <img className='m-auto' src={picture} alt="" />
-                <h4>Name: {name}</h4>
-                <h5>Price: ${price}</h5>
-                <button onClick={() => handleAddToCart(product)}>
-                    <p>Add To Cart</p>
+                <div className="product-info">
+                    <h5>{name}</h5>
+                    <h6>Price: ${price}</h6>
+                </div>
+                <button onClick={() => handleAddToCart(product)} className='btn-shopping btn-primary'>
+                    <p className='btn-text'>Add To Cart</p>
                 </button>
             </div>
         </div>
