@@ -49,11 +49,11 @@ const Shop = () => {
         }
 
     }
-
+    // reset function for reset choosed items
     const resetFunc = () => {
         setCart([]);
     }
-
+    // modal 
     const [modalIsOpen, setIsOpen] = React.useState(false);
     //Modal open function
     function openModal() {
