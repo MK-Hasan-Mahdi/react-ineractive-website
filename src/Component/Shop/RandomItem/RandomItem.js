@@ -5,7 +5,7 @@ const RandomItem = (props) => {
     // console.log(randomItem);
     return (
         <div>
-            <h3>Name: {name}</h3>
+            {/* <h3>Name: {name}</h3> */}
         </div>
     );
 };
