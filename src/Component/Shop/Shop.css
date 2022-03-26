@@ -10,6 +10,16 @@
     border: 1px solid #95A0A7;
     border-radius: 8px;
 }
+.modal-image{
+    width: 200px;
+}
+.cross{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 18px;
+    margin: 8px;
+}
 @media screen and (max-width: 400px){
     .shop-container{
         grid-template-columns: 1fr;

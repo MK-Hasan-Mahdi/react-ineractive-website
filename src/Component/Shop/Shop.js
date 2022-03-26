@@ -97,8 +97,9 @@ const Shop = () => {
                     <img className='modal-image' src={randomItem.picture} alt="" />
                     <h1>{randomItem.name}</h1>
                 </Modal>
-                <button onClick={() => randomFunc(cart)}>click</button>
-                <button onClick={resetFunc}>Reset</button>
+                <button onClick={() => randomFunc(cart)} className="btn btn-info w-100">click</button>
+                <br />
+                <button onClick={resetFunc} className="btn btn-warning w-100">Reset</button>
             </div>
         </div>
     );
