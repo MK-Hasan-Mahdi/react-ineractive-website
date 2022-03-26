@@ -6,6 +6,7 @@ import './Shop.css';
 const Shop = () => {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
+    console.log(cart);
     // const [laptop, setLaptop] = useState([]);
 
     useEffect(() => {
@@ -16,12 +17,9 @@ const Shop = () => {
 
     const handleAddToCart = (product) => {
         // console.log('I am clicked button');
+        console.log(product);
         const selectedProduct = [...cart, product];
         setCart(selectedProduct);
-    }
-
-    const handleChooseOne = () => {
-        console.log('choose one randomly');
     }
 
     return (
@@ -40,10 +38,9 @@ const Shop = () => {
                 {
                     cart.map(item => <Cart
                         key={item.id}
-                        item={item.name}
+                        item={item}
                     ></Cart>)
                 }
-                <button onClick={() => handleChooseOne()}>Choose One:</button>
             </div>
         </div>
     );
