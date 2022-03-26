@@ -6,6 +6,7 @@ import './Shop.css';
 const Shop = () => {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
+    // const [laptop, setLaptop] = useState([]);
 
     useEffect(() => {
         fetch('data.json')
@@ -16,7 +17,11 @@ const Shop = () => {
     const handleAddToCart = (product) => {
         // console.log('I am clicked button');
         const selectedProduct = [...cart, product];
-        setCart(selectedProduct)
+        setCart(selectedProduct);
+    }
+
+    const handleChooseOne = () => {
+        console.log('choose one randomly');
     }
 
     return (
@@ -31,9 +36,14 @@ const Shop = () => {
                 }
             </div>
             <div className="cart-container">
-                <Cart
-                    cart={cart}
-                ></Cart>
+                <h3>Products Cart</h3>
+                {
+                    cart.map(item => <Cart
+                        key={item.id}
+                        item={item.name}
+                    ></Cart>)
+                }
+                <button onClick={() => handleChooseOne()}>Choose One:</button>
             </div>
         </div>
     );

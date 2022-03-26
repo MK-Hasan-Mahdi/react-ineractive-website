@@ -2,12 +2,12 @@ import React from 'react';
 
 const Cart = (props) => {
     // console.log(props);
-    const { cart } = props;
+    const { item } = props;
+    console.log(item);
+
     return (
         <div>
-            <h3>Products Cart</h3>
-            <h5>Selected Item: {cart.length} </h5>
-            <h5>Item: </h5>
+            <h5>Items: {item} </h5>
         </div>
     );
 };
