@@ -74,8 +74,8 @@ const Shop = () => {
                     ></Product>)
                 }
             </div>
-            <div className="cart-container shadow">
-                <h3>Products Cart</h3>
+            <div className="cart-container shadow bg-info">
+                <h3 className='bg-primary p-2'>Products Cart</h3>
                 {
                     cart.map(item => <Cart
                         key={item.id}
